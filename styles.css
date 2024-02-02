@@ -1,0 +1,121 @@
+/* Alexis Nguyen */
+
+body {
+    font-family: 'Courier New';
+    font-size: 1rem;
+    margin: 0%;
+    padding-bottom: 5%;
+}
+h1 {
+    font-family: Impact;
+    font-size: 4rem;
+    color: rgb(87, 47, 18);
+    background-color: rgb(255, 244, 230);
+    text-align: center;
+    margin-top: 0%;
+    padding: .5rem;
+}
+h3 {
+    font-family: Impact;
+    font-size: 2rem;
+    color: rgb(87, 47, 18);
+    text-align: center;
+    margin-bottom: 0%;
+}
+p {
+    margin-top: 0%;
+    text-align: center;
+}
+textarea {
+    font-family: 'Courier New';
+    font-size: 0.75rem;
+    width: 30%;
+    height: 3rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+img {
+    width: 30%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+div {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+table {
+    display: inline-block;
+}
+td {
+    vertical-align: top;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+select {
+    text-align: center;
+}
+form {
+    text-align: left;
+}
+.thanks {
+    padding: 3rem;
+}
+.details {
+    padding-top: 1rem;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+ul {
+    display: inline-block;
+    text-align: left;
+}
+.orderHeader {
+    margin:0%;
+    max-height: max-content;
+}
+/* Dropdown Starter Code: https://www.w3schools.com/howto/howto_css_dropdown.asp  */
+.orderHeaderLeft {
+    display: inline-block;
+    vertical-align: top;
+    margin:0%;
+}
+.orderHeaderDropdown {
+    display: inline-block;
+    vertical-align: top;
+    border-bottom: 3px solid;
+    border-color: rgb(87, 47, 18);
+    margin:0%;
+}
+.months {
+    position: relative;
+    display: inline-block;
+    margin:0%;
+}
+.months-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    height: 10rem;
+    overflow-y: scroll;
+}
+.months-content a {
+    color: rgb(87, 47, 18);
+    padding: .5rem .45rem;
+    text-decoration: none;
+    display: block;
+}
+.months-content a:hover {
+    background-color: #ddd;
+}
+.months:hover .months-content {
+    display: block;
+}
+  
+

@@ -1,0 +1,113 @@
+<!-- Alexis Nguyen -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Homework 2</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/>
+        </script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <!-- Title -->
+        <h1>Cheesecake Order Form</h1>
+        <!-- Cheesecake image -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg" alt="picture"/><br/>
+
+        <!-- Quantity, topping, notes -->
+        <div class="order">
+
+            <!-- Table for quantity and topping -->
+            <div class="selection">
+                <table>
+                    <tr>
+                        <!-- Quantity/Dropdown Side -->
+                        <td>
+                            <p>Quantity</p>
+                            <select name="quantity" id="dropdown">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                        </td>
+                        <!-- Topping/Radio Side -->
+                        <td>
+                            <p>Topping</p>
+                            <form>
+                                <label>
+                                    <input type="radio" id="plain" name="topping" value="Plain">
+                                    Plain
+                                </label><br/>
+                                <label>
+                                    <input type="radio" id="cherry" name="topping" value="Cherry">
+                                    Cherry
+                                </label><br/>
+                                <label>
+                                    <input type="radio" id="Chocolate" name="topping" value="Chocolate">
+                                    Chocolate
+                                </label>
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- Notes section -->
+            <div class="notes">
+                <p>Notes:</p>
+                <textarea id="notes" placeholder="Enter any special instructions here."></textarea><br/>
+                <input type="button" value="Order" id="button">
+            </div>
+            
+        </div>
+        
+
+        <!-- Thank you section that appears on order click -->
+        <div class="thanks">
+            <h3>Thank you! Your order has been placed.</h3>
+            <div class="details">
+                <p id="details"></p>
+                <p id="detailsNotes"></p>
+            </div>
+        </div>
+        
+        <!-- Total orders section -->
+        <div class="total">
+            <div class="orderHeader">
+                <h3 class="orderHeaderLeft">Orders For</h3>
+                <div class="months">
+                    <h3 class="orderHeaderDropdown">Jan</h3>
+                    <div class="months-content">
+                        <a href="#">Jan</a>
+                        <a href="#">Feb</a>
+                        <a href="#">Mar</a>
+                        <a href="#">Apr</a>
+                        <a href="#">May</a>
+                        <a href="#">Jun</a>
+                        <a href="#">Jul</a>
+                        <a href="#">Aug</a>
+                        <a href="#">Sep</a>
+                        <a href="#">Oct</a>
+                        <a href="#">Nov</a>
+                        <a href="#">Dec</a>
+                    </div>
+                  </div>
+                <!-- Dropdown Starter Code: https://www.w3schools.com/howto/howto_css_dropdown.asp -->
+
+            </div>
+            
+            <ul>
+                <li>11 cherry</li>
+                <li>17 chocolate</li>
+                <li>31 plain</li>
+            </ul>
+        </div>
+
+    </body>
+</html>
