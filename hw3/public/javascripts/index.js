@@ -27,6 +27,14 @@ $(document).ready(function() {
             $(".order").hide();
             $(".thanks").show();
         }
-    });
-});
+    }); // end of #button
+
+    eventHandler = function( event ) {
+        /* do stuff */
+    }
+    $(function() {
+        $(".foo").click(eventHandler);
+    }); // end of event
+
+}); // end of doc
 
