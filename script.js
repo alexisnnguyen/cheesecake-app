@@ -1,3 +1,5 @@
+// Alexis Nguyen
+
 $(document).ready(function() {
     // hides the thank you section
     $(".thanks").hide();
