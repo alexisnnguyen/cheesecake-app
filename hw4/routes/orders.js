@@ -3,22 +3,27 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET orders listing. */
-router.get('/', function(req, res, next) {
-  const orders = [
-    { topping: 'cherry', 
+// POST
+router.post('/', function(req, res, next) {
+  // receive month data
+  const { month } = req.body;
+
+  // Placeholder logic to fetch orders data for the specified month
+  const ordersForMonth = [
+    { topping: 'Cherry',
       quantity: 0 
     },
-    { topping: 'plain', 
+    { topping: 'Chocolate', 
       quantity: 0 
     },
-    { topping: 'chocolate', 
+    { topping: 'Plain', 
       quantity: 0 
     }
   ];
 
-  // Sending the array of objects as JSON response using res.json()
-  res.json(orders);
+  // Sending the fetched orders data as a JSON response
+  res.json(ordersForMonth);
 });
+
 
 module.exports = router;

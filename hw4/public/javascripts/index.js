@@ -1,8 +1,10 @@
 // Alexis Nguyen
 
 $(document).ready(function() {
+
     // hides the thank you section
     $(".thanks").hide();
+
     // on order click
     $("#button").click(function() {
 
@@ -28,6 +30,30 @@ $(document).ready(function() {
             $(".thanks").show();
         }
     }); // end of #button
+
+    // on month click
+    $('.months-content a').click(function(e) {
+        e.preventDefault(); // prevents the browser from following the link
+        var selectedMonth = $(this).text(); // puts selected month into variable
+        
+        // issue a POST request to the server
+        $.post('/orders', { month: selectedMonth })
+            .done(function(response) { // request successful
+                $('#ordersList').empty(); // clear previous orders
+
+                // loop through the orders and append them to the orders list
+                $.each(response, function(index, order) {
+                    var listItem = '<li>' +
+                                '<span class="quantity">' + order.quantity + '</span> ' +
+                                '<span class="topping">' + order.topping + '</span>' +
+                                '</li>';
+                    $('#ordersList').append(listItem);
+                });
+            })
+            .fail(function(xhr, status, error) { // request failed
+                console.error('Error:', error);
+            });
+    }); // end of month selector
 
     eventHandler = function( event ) {
         /* do stuff */
