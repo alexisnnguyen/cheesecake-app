@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var ordersRouter = require('./routes/orders'); //Added for orders
+var neworderRouter = require('./routes/neworder'); //Added for neworder
 
 var app = express();
 
@@ -23,12 +24,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/orders', ordersRouter); // Added for orders
+app.use('/neworder', neworderRouter); // Added for neworder
 
-// // Start the server
-// const port = 3000;
-// app.listen(port, () => {
-//   console.log(`Server is running on http://localhost:${port}`);
-// });
+// Start the server
+const port = 4000;
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
